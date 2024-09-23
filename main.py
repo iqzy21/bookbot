@@ -10,3 +10,16 @@ def word_count(text):
     words = text.split()
     return (len(words))
 
+def char_count(text):
+    letters = {}
+    lowered_text = text.lower()
+
+    for char in lowered_text:
+        if char.isalpha():
+            if char in letters:
+                letters[char] += 1
+            else:
+                letters[char] = 1
+    sort(letters)
+    return(letters)
+
