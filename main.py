@@ -23,3 +23,11 @@ def char_count(text):
     sort(letters)
     return(letters)
 
+def sort(dict):
+    char_list = []
+    for char, count in dict.items():
+        char_list.append((char,count))
+    char_list.sort(key=lambda x: x[1], reverse=True)
+    for char, count in char_list:
+        return char_list
+
