@@ -30,4 +30,22 @@ def sort(dict):
     char_list.sort(key=lambda x: x[1], reverse=True)
     for char, count in char_list:
         return char_list
+    
+def main():
+    print("--- Begin report of books/frankenstein.txt ---")
+    text = read_file()
+
+    count = word_count(text)
+    print(f"{count} words found in the document")
+
+    
+    count_char = char_count(text)
+    sorted_chars = sort(count_char) 
+
+    for char, count in sorted_chars:
+        print(f"The '{char}' character was found {count} times")
+
+    print("--- End report ---")
+    
+main()   
 
