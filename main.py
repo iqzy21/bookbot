@@ -1,4 +1,4 @@
-def read_file():
+def read_file(): #this function reads the file and returns the contents
     book = "books/frankenstein.txt"
     with open(book) as f:
         file_contents = f.read()
@@ -6,11 +6,11 @@ def read_file():
     char_count(file_contents)
     return (file_contents)
 
-def word_count(text):
+def word_count(text): # this function counts how many words in this file and returns the count
     words = text.split()
     return (len(words))
 
-def char_count(text):
+def char_count(text): #this function counts how many characters are in the fumction
     letters = {}
     lowered_text = text.lower()
 
@@ -23,7 +23,7 @@ def char_count(text):
     sort(letters)
     return(letters)
 
-def sort(dict):
+def sort(dict): #This function sorts the list of letters into a highest to lowest order by number 
     char_list = []
     for char, count in dict.items():
         char_list.append((char,count))
@@ -31,12 +31,12 @@ def sort(dict):
     for char, count in char_list:
         return char_list
     
-def main():
+def main(): #This is the main function where we call all the previous functions to print the final result 
     print("--- Begin report of books/frankenstein.txt ---")
     text = read_file()
 
     count = word_count(text)
-    print(f"{count} words found in the document")
+    print(f"{count} words found in the document\n")
 
     
     count_char = char_count(text)
@@ -44,8 +44,10 @@ def main():
 
     for char, count in sorted_chars:
         print(f"The '{char}' character was found {count} times")
+    
+    
 
-    print("--- End report ---")
+    print("\n--- End report ---")
     
 main()   
 
