@@ -1,4 +1,6 @@
-# BookBot - A Text Analysis Tool
+# My First Project
+# BookBot - A Text Analysis Tool 
+
 
 *BookBot* is a Python-powered text analysis tool that reads any text file and generates a comprehensive report on its word count and the frequency of each letter. Originally built to analyse the novel *Frankenstein*, it can be used for any text file of your choice.
 
