@@ -5,3 +5,8 @@ def read_file():
     word_count(file_contents)
     char_count(file_contents)
     return (file_contents)
+
+def word_count(text):
+    words = text.split()
+    return (len(words))
+
